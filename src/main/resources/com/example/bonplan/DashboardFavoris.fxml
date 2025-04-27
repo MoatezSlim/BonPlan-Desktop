@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="575.0" prefWidth="966.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bonplan.Controllers.DashboardFavorisController">
+    <children>
+        <VBox layoutX="14.0" layoutY="76.0" prefHeight="316.0" prefWidth="112.0" spacing="25.0">
+            <children>
+                <Label fx:id="tr_id" layoutX="10.0" layoutY="27.0" text="ID">
+                    <font>
+                        <Font name="Ayuthaya" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="tr_nom" layoutX="10.0" layoutY="44.0" text="user ID">
+                    <font>
+                        <Font name="Ayuthaya" size="15.0" />
+                    </font>
+                </Label>
+                <Label fx:id="tr_bonplan" layoutX="10.0" layoutY="194.0" prefHeight="21.0" prefWidth="95.0" text="bon plan ID">
+                    <font>
+                        <Font name="Ayuthaya" size="15.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <VBox fx:id="tr_voy" layoutX="126.0" layoutY="76.0" prefHeight="316.0" prefWidth="170.0" spacing="20.0">
+            <children>
+                <TextField fx:id="tf_id" layoutX="10.0" layoutY="10.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="tf_userId" layoutX="10.0" layoutY="62.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="tf_bonPlanId" layoutX="10.0" layoutY="10.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+            </children>
+        </VBox>
+        <TableView fx:id="table_favoris" layoutX="310.0" layoutY="74.0" prefHeight="415.0" prefWidth="543.0">
+            <columns>
+                <TableColumn fx:id="col_id" prefWidth="68.0" text="ID" />
+                <TableColumn fx:id="col_userId" prefWidth="77.60003662109375" text="user ID" />
+                <TableColumn fx:id="col_bonPlanId" prefWidth="144.0" text="bon plan ID" />
+            </columns>
+        </TableView>
+        <Button fx:id="btn_insert" layoutX="14.0" layoutY="416.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: #9CE794;" text="Insert" />
+        <Button fx:id="btn_update" layoutX="119.0" layoutY="416.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: #FFA17A;" text="Update" />
+        <Button fx:id="btn_delete" layoutX="224.0" layoutY="415.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" style="-fx-background-color: #9C0054;" text="Delete" textFill="WHITE" />
+        <Button fx:id="btn_pdf" layoutX="704.0" layoutY="40.0" mnemonicParsing="false" style="-fx-background-color: #002e83;" text="PDF" textFill="#f5f5f5" />
+        <Button fx:id="btn_stat" layoutX="763.0" layoutY="40.0" mnemonicParsing="false" style="-fx-background-color: #002e83;" text="Stat" textFill="WHITE" />
+        <Button fx:id="btn_ret" layoutX="14.0" layoutY="527.0" mnemonicParsing="false" style="-fx-background-color: #95d3f2;" text="Retour" />
+    </children>
+</AnchorPane>

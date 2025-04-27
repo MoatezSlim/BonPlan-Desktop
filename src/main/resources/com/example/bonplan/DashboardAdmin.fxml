@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1024.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bonplan.Controllers.BusinessInfoController">
+    <children>
+        <AnchorPane layoutX="-3.0" layoutY="-6.0" prefHeight="63.0" prefWidth="1033.0" style="-fx-border-color: #bcb6b6;">
+            <children>
+                <ImageView fitHeight="24.0" fitWidth="110.0" layoutX="45.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Images/logo.jpg" />
+                    </image>
+                </ImageView>
+                <Button layoutX="834.0" layoutY="21.0" mnemonicParsing="false" style="-fx-background-color: white; -fx-font-weight: bold;" text="Bon Plans" textFill="#ffc700">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <Button fx:id="btn_profile1" layoutX="936.0" layoutY="21.0" mnemonicParsing="false" onAction="#go_toDashboard" style="-fx-background-color: white; -fx-font-weight: bold;" text="Profile">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            </children>
+        </AnchorPane>
+        <TextField fx:id="searchField" layoutX="800.0" layoutY="163.0" prefHeight="34.0" prefWidth="200.0" promptText="Search" style="-fx-background-radius: 0;" />
+        <ImageView fitHeight="35.0" fitWidth="32.0" layoutX="967.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@Images/searchbar.png" />
+            </image>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </ImageView>
+        <Text layoutX="274.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Explore, Try, Search For " wrappingWidth="415.123046875">
+            <font>
+                <Font name="System Bold" size="36.0" />
+            </font></Text>
+        <Text layoutX="274.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A New " wrappingWidth="133.123046875">
+            <font>
+                <Font name="System Bold" size="36.0" />
+            </font>
+        </Text>
+        <Text fill="#ffc700" layoutX="389.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Adventure" wrappingWidth="299.123046875">
+            <font>
+                <Font name="System Bold" size="36.0" />
+            </font>
+        </Text>
+        <Text fill="#ffc700" layoutX="45.0" layoutY="224.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Filters">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Text>
+        <VBox layoutX="45.0" layoutY="242.0" prefHeight="520.0" prefWidth="217.0" style="-fx-border-color: #bcb6b6;">
+            <children>
+                <Label layoutX="10.0" text="Categories:">
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="25.0" right="10.0" top="25.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="categoryComboBox" prefHeight="36.0" prefWidth="143.0" promptText="Food" style="-fx-background-radius: 0; -fx-background-color: white; -fx-border-color: #bcb6b6;">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Clothing Store" />
+                            <String fx:value="Complex" />
+                            <String fx:value="Coffee Shop" />
+                            <String fx:value="Fast Food" />
+                            <String fx:value="Store" />
+                            <String fx:value="Market" />
+                            <String fx:value="Educational" />
+                            <String fx:value="Bar" />
+                            <String fx:value="Restaurant" />
+                            <String fx:value="Gym" />
+                            <String fx:value="Tea House" />
+                        </FXCollections>
+                    </items>
+                    <VBox.margin>
+                        <Insets bottom="20.0" left="25.0" right="10.0" />
+                    </VBox.margin>
+                </ComboBox>
+                <Label text="City">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="25.0" right="10.0" />
+                    </VBox.margin>
+                </Label>
+                <ComboBox fx:id="cityComboBox" prefHeight="36.0" prefWidth="143.0" promptText="Mahdia" style="-fx-border-color: #bcb6b6; -fx-background-color: white; -fx-background-radius: 0;">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Ariana" />
+                            <String fx:value="Béja" />
+                            <String fx:value="Ben Arous" />
+                            <String fx:value="Bizerte" />
+                            <String fx:value="Gabès" />
+                            <String fx:value="Gafsa" />
+                            <String fx:value="Jendouba" />
+                            <String fx:value="Kairouan" />
+                            <String fx:value="Kasserine" />
+                            <String fx:value="Kebili" />
+                            <String fx:value="Le Kef" />
+                            <String fx:value="Mahdia" />
+                            <String fx:value="La Manouba" />
+                            <String fx:value="Médenine" />
+                            <String fx:value="Monastir" />
+                            <String fx:value="Nabeul" />
+                            <String fx:value="Sfax" />
+                            <String fx:value="Sidi Bouzid" />
+                            <String fx:value="Siliana" />
+                            <String fx:value="Sousse" />
+                            <String fx:value="Tataouine" />
+                            <String fx:value="Tozeur" />
+                            <String fx:value="Tunis" />
+                            <String fx:value="Zaghouan" />
+                        </FXCollections>
+                    </items>
+                    <VBox.margin>
+                        <Insets bottom="20.0" left="25.0" right="10.0" />
+                    </VBox.margin>
+                </ComboBox>
+                <HBox prefHeight="54.0" prefWidth="215.0">
+                    <children>
+                        <Label text="Offers Only">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets bottom="20.0" left="25.0" right="10.0" top="10.0" />
+                            </HBox.margin>
+                        </Label>
+                        <CheckBox fx:id="openOnlyCheckBox" style="-fx-background-radius: 0; -fx-background-color: white;">
+                            <HBox.margin>
+                                <Insets left="52.0" top="10.0" />
+                            </HBox.margin>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </CheckBox>
+                    </children>
+                </HBox>
+                <HBox prefHeight="69.0" prefWidth="215.0">
+                    <children>
+                        <Label text="Open Only">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets bottom="20.0" left="25.0" right="10.0" top="10.0" />
+                            </HBox.margin>
+                        </Label>
+                        <CheckBox fx:id="offersOnlyCheckBox">
+                            <HBox.margin>
+                                <Insets bottom="20.0" left="57.0" top="10.0" />
+                            </HBox.margin>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </CheckBox>
+                    </children>
+                </HBox>
+                <Label text="Rating">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="20.0" left="25.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <HBox prefHeight="6.0" prefWidth="173.0">
+                    <children>
+                        <ComboBox fx:id="ratingSlider" prefHeight="27.0" prefWidth="52.0" promptText="1" style="-fx-border-color: #bcb6b6; -fx-background-color: white; -fx-background-radius: 0;">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="1" />
+                                    <String fx:value="2" />
+                                    <String fx:value="3" />
+                                    <String fx:value="4" />
+                                    <String fx:value="5" />
+                                </FXCollections>
+                            </items>
+                            <HBox.margin>
+                                <Insets top="2.0" />
+                            </HBox.margin>
+                        </ComboBox>
+                        <ImageView fitHeight="28.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@Images/star.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                        </ImageView>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="15.0" left="25.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox prefHeight="101.0" prefWidth="198.0">
+                    <children>
+                        <Button fx:id="btn_reset" mnemonicParsing="false" prefHeight="24.0" prefWidth="60.0" style="-fx-background-color: white; -fx-background-radius: 0; -fx-border-color: #ffc700;" text="Reset" textFill="#ffc700">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <HBox.margin>
+                                <Insets bottom="2.0" left="27.0" right="25.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn_search" mnemonicParsing="false" prefHeight="27.0" prefWidth="64.0" style="-fx-background-color: #FFC700; -fx-background-radius: 0;" text="Search" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="50.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+        <ScrollPane fx:id="scrollPaneContainer" hbarPolicy="NEVER" layoutX="272.0" layoutY="254.0" prefHeight="500.0" prefWidth="730.0" style="-fx-background-color: white;" vbarPolicy="ALWAYS">
+            <content>
+                <VBox fx:id="vboxContainer" prefHeight="500.0" prefWidth="715.0" spacing="20.0" style="-fx-background-color: white;">
+                    <!-- Les éléments de bons plans seront ajoutés ici -->
+                </VBox>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>

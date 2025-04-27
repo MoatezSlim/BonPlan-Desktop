@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bonplan.Controllers.StatistiqueBonPlanController">
+    <children>
+        <VBox layoutX="20.0" layoutY="20.0" spacing="10.0" prefHeight="360.0" prefWidth="560.0">
+            <children>
+                <HBox spacing="10.0">
+                    <Label fx:id="totalBonPlanCount" text="Total bon plans:" />
+                    <Label fx:id="newBonPlanCount7Days" text="New bon plans last 7 days:" />
+                    <Label fx:id="newBonPlanCount3Months" text="New bon plans last 3 months:" />
+                </HBox>
+                <LineChart fx:id="bonPlanCreationChart" prefHeight="300.0" prefWidth="500.0">
+                    <xAxis>
+                        <CategoryAxis label="Date" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis label="Bon plan creations" />
+                    </yAxis>
+                </LineChart>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

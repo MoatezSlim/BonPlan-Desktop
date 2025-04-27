@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1024.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bonplan.Controllers.DashboardMenuController">
+   <children>
+      <VBox layoutX="36.0" layoutY="183.0" prefHeight="300.0" prefWidth="306.0" style="-fx-border-color: #bcb6b6;">
+         <children>
+            <HBox prefHeight="42.0" prefWidth="304.0">
+               <children>
+                  <Label fx:id="tr_id" text="ID ">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="30.0" right="50.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="tf_id">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="10.0" right="10.0" top="15.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="46.0" prefWidth="304.0">
+               <children>
+                  <Label fx:id="tr_nom" text="Name">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="tf_nom">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="12.0" top="15.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="51.0" prefWidth="304.0">
+               <children>
+                  <HBox prefHeight="61.0" prefWidth="304.0">
+                     <children>
+                        <Label fx:id="tr_bonplan" text="Bon Plan">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="30.0" right="25.0" top="20.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="tf_bonplan">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="20.0" top="15.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="61.0" prefWidth="304.0">
+               <children>
+                  <Button fx:id="btn_delete" mnemonicParsing="false" prefHeight="9.0" prefWidth="5.0" style="-fx-background-color: white;">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Delete.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="170.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btn_update" mnemonicParsing="false" prefHeight="3.0" prefWidth="0.0" style="-fx-background-color: white;">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Modifier.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_insert" mnemonicParsing="false" prefHeight="13.0" prefWidth="3.0" style="-fx-background-color: white;">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Add.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <TableView fx:id="table_menus" layoutX="388.0" layoutY="185.0" prefHeight="415.0" prefWidth="482.0" style="-fx-background-color: #E8E8E8;">
+         <columns>
+            <TableColumn fx:id="col_id" prefWidth="95.0" style="-fx-background-color: #E8E8E8; -fx-border-color: transparent transparent #d7d3d3 transparent; -fx-padding: 10 10 10 10;" text="ID" />
+            <TableColumn fx:id="col_nom" prefWidth="169.0" style="-fx-border-color: transparent transparent #d7d3d3 transparent; -fx-background-color: #E8E8E8; -fx-margin: 10 10 10 10;" text="Name" />
+            <TableColumn fx:id="col_bonplan" minWidth="0.0" prefWidth="217.0" style="-fx-border-color: transparent transparent #d7d3d3 transparent; -fx-background-color: #E8E8E8;" text="Bon Plan " />
+         </columns>
+      </TableView>
+      <Button fx:id="bn_pdf" layoutX="704.0" layoutY="144.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="50.0" style="-fx-background-color: #ffc700; -fx-background-radius: 0;" text="PDF" textFill="WHITESMOKE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btn_stat" layoutX="763.0" layoutY="144.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="107.0" style="-fx-background-color: #ffc700; -fx-background-radius: 0;" text="Statistiques" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <AnchorPane prefHeight="63.0" prefWidth="1033.0" style="-fx-border-color: #bcb6b6;">
+         <children>
+            <Button fx:id="btn_users" layoutX="525.0" layoutY="17.0" mnemonicParsing="false" onAction="#go_toUser" style="-fx-background-color: white; -fx-font-weight: bold;" text="Users" textFill="#0a0a0a">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn_BP" layoutX="591.0" layoutY="17.0" mnemonicParsing="false" onAction="#go_to_BP" style="-fx-background-color: white; -fx-font-weight: bold;" text="Bon plans" textFill="#0a0a0a">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="bnt_Offres" layoutX="685.0" layoutY="17.0" mnemonicParsing="false" onAction="#go_to_Offres" style="-fx-background-color: white; -fx-font-weight: bold;" text="Offres" textFill="#0a0a0a">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn_Menus" layoutX="750.0" layoutY="17.0" mnemonicParsing="false" style="-fx-background-color: white; -fx-font-weight: bold;" text="Menus" textFill="#ffc700">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn_SousMenus" layoutX="825.0" layoutY="17.0" mnemonicParsing="false" onAction="#go_to_SousMenus" style="-fx-background-color: white; -fx-font-weight: bold;" text="Sous Menus" textFill="#0a0a0a">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btn_ratings" layoutX="930.0" layoutY="17.0" mnemonicParsing="false" onAction="#go_to_Ratings" style="-fx-background-color: white; -fx-font-weight: bold;" text="Ratings" textFill="#0a0a0a">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="rechercheField" layoutX="539.0" layoutY="146.0" promptText="Recherche Nom" />
+      <Button fx:id="btn_toBP" layoutX="30.0" layoutY="14.0" mnemonicParsing="false" onAction="#go_to_BP2" style="-fx-background-color: white;">
+         <graphic>
+            <ImageView fx:id="img_to_BnInfo" fitHeight="24.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/logo.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+
+</AnchorPane>
