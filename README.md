@@ -22,3 +22,5 @@ Bonplan is a JavaFX application designed to provide users with a platform to dis
    ```bash
    git clone https://github.com/MoatezSlim/BonPlan-Desktop.git
    cd BonPlan-Desktop
+
+   enjoy :)
